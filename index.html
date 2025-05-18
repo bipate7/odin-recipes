@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Delicious Recipes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delicious Recipes Hub</title>
   <style>
     * {
       margin: 0;
@@ -13,7 +13,7 @@
     }
 
     body {
-      background: #fff8f0;
+      background: #fffaf0;
       color: #333;
     }
 
@@ -30,6 +30,44 @@
       margin-bottom: 10px;
     }
 
+    nav {
+      background: #f8c291;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6b6b;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: #ffeaa7;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #d63031;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
     .recipes {
       display: flex;
       flex-wrap: wrap;
@@ -43,7 +81,7 @@
       background: white;
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
       animation: slideUp 1s ease forwards;
@@ -51,7 +89,7 @@
 
     .card:hover {
       transform: scale(1.05);
-      box-shadow: 0 20px 30px rgba(0,0,0,0.25);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
     }
 
     .card img {
@@ -77,11 +115,10 @@
     }
 
     footer {
-      background: #ff6b6b;
+      background: #2d3436;
       color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 30px;
+      padding: 30px;
     }
 
     @keyframes fadeIn {
@@ -103,6 +140,46 @@
         font-size: 2rem;
       }
     }
+
+    .auth-section {
+      text-align: center;
+      margin: 30px auto;
+    }
+
+    .auth-section a {
+      margin: 0 15px;
+      padding: 10px 20px;
+      background: #f7d794;
+      color: #333;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .auth-section a:hover {
+      background: #ffbe76;
+    }
+
+    .about-section, .contact-section {
+      padding: 40px;
+      background: #f1f2f6;
+      text-align: center;
+    }
+
+    .about-section h3, .contact-section h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #2d3436;
+    }
+
+    .about-section p, .contact-section p {
+      font-size: 1rem;
+      max-width: 700px;
+      margin: auto;
+      color: #636e72;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -112,36 +189,81 @@
     <p>Explore, Cook & Enjoy!</p>
   </header>
 
-  <section class="recipes">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="auth-section">
+    <a href="#">Login</a>
+    <a href="#">Signup</a>
+  </div>
+
+  <div class="hero">
+    <h2>Welcome to Your Favorite Recipe Destination</h2>
+    <p>Discover mouth-watering dishes, step-by-step guides, and become a master chef at home!</p>
+  </div>
+
+  <section class="recipes" id="recipes">
     <div class="card">
       <img src="https://images.unsplash.com/photo-1601315576609-ec5d4e62b9ec?auto=format&fit=crop&w=800&q=80" alt="Pasta">
       <div class="card-content">
         <h2>Spaghetti Carbonara</h2>
-        <p>A classic Italian pasta dish made with creamy eggs, cheese, pancetta, and pepper. Quick and delicious!</p>
+        <p>A classic Italian pasta dish made with creamy eggs, cheese, pancetta, and pepper.</p>
       </div>
     </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1612197583545-02fe6b94fcee?auto=format&fit=crop&w=800&q=80" alt="Burger">
       <div class="card-content">
         <h2>Cheesy Beef Burger</h2>
-        <p>Juicy grilled beef patty with melted cheese, lettuce, and special sauce in a soft sesame bun.</p>
+        <p>Juicy grilled beef patty with melted cheese, lettuce, and sauce in a sesame bun.</p>
       </div>
     </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Cake">
       <div class="card-content">
         <h2>Chocolate Lava Cake</h2>
-        <p>Rich, gooey molten chocolate center with a soft cake exterior. Perfect for dessert lovers!</p>
+        <p>Rich molten chocolate center with a soft cake exterior. Perfect for dessert lovers!</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1621996346566-ff246f243a83?auto=format&fit=crop&w=800&q=80" alt="Salad">
+      <div class="card-content">
+        <h2>Fresh Garden Salad</h2>
+        <p>Fresh veggies topped with feta cheese and tangy vinaigrette. A healthy option!</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604908177523-93779c64cdd0?auto=format&fit=crop&w=800&q=80" alt="Pizza">
+      <div class="card-content">
+        <h2>Margherita Pizza</h2>
+        <p>Classic pizza with fresh tomatoes, mozzarella, basil, and golden crispy crust.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618416811034-eec3bb43c2f0?auto=format&fit=crop&w=800&q=80" alt="Sushi">
+      <div class="card-content">
+        <h2>Classic Sushi Rolls</h2>
+        <p>Delicate rolls of vinegared rice, fresh fish, and vegetables wrapped in seaweed.</p>
       </div>
     </div>
   </section>
 
+  <section class="about-section" id="about">
+    <h3>About Us</h3>
+    <p>Delicious Recipes Hub is a community of passionate cooks and foodies. Our mission is to inspire everyone to explore and enjoy global cuisines right from their own kitchen.</p>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h3>Contact Us</h3>
+    <p>Have questions or want to contribute a recipe? Reach out to us at: <strong>hello@recipeshub.com</strong></p>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Delicious Recipes Hub | Made with ❤️ for Food Lovers</p>
+    <p>&copy; 2025 Delicious Recipes Hub | Designed with ❤️ for Food Lovers</p>
   </footer>
 
 </body>
 </html>
-
