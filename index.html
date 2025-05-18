@@ -1,1 +1,147 @@
-<h1>“Odin Recipes”</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delicious Recipes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(45deg, #ff6b6b, #f7d794);
+      padding: 30px 0;
+      text-align: center;
+      color: white;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .recipes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .card {
+      width: 300px;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      animation: slideUp 1s ease forwards;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.25);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h2 {
+      font-size: 1.5rem;
+      color: #e17055;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #ff6b6b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍽️ Delicious Recipes Hub</h1>
+    <p>Explore, Cook & Enjoy!</p>
+  </header>
+
+  <section class="recipes">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1601315576609-ec5d4e62b9ec?auto=format&fit=crop&w=800&q=80" alt="Pasta">
+      <div class="card-content">
+        <h2>Spaghetti Carbonara</h2>
+        <p>A classic Italian pasta dish made with creamy eggs, cheese, pancetta, and pepper. Quick and delicious!</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1612197583545-02fe6b94fcee?auto=format&fit=crop&w=800&q=80" alt="Burger">
+      <div class="card-content">
+        <h2>Cheesy Beef Burger</h2>
+        <p>Juicy grilled beef patty with melted cheese, lettuce, and special sauce in a soft sesame bun.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Cake">
+      <div class="card-content">
+        <h2>Chocolate Lava Cake</h2>
+        <p>Rich, gooey molten chocolate center with a soft cake exterior. Perfect for dessert lovers!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Delicious Recipes Hub | Made with ❤️ for Food Lovers</p>
+  </footer>
+
+</body>
+</html>
+
